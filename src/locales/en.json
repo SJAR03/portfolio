@@ -1,0 +1,118 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About me",
+        "blog": "Blog"
+    },
+    "home": {
+        "greeting": "Hi! I'm",
+        "description": "Software Engineer with focus on backend development. Experience in .Net, ASP.NET Core, Java, Spring Boot, React and modern web technologies. Passionate about DevOps",
+        "currentRole": "Currently working as",
+        "company": "Backend Developer at Flor de Caña",
+        "companyDescription": "Develop backend REST APIs with ASP.NET Core, Java, Jakarta EE, and Spring Boot using SQL Server, while managing Linux servers on DigitalOcean and AWS with Docker. Collaborated on frontend React development and maintained CI/CD workflows via GitLab.",
+        "companyLink": "Visit Company Website",
+        "downloadCV": "Download CV",
+        "viewCV": "View CV Online"
+    },
+    "skills": {
+        "title": "Skills & technologies"
+    },
+    "about": {
+        "title": "About me",
+        "intro": "Passionate developer with expertise in modern web technologies",
+        "experience": {
+            "title": "Professional experience",
+            "items": [
+                {
+                    "title": "Senior Full Stack Developer",
+                    "company": "TechCorp Inc.",
+                    "period": "2022 - Present",
+                    "location": "Remote",
+                    "description": [
+                        "Leading development of scalable web applications using React and Node.js",
+                        "Implemented microservices architecture reducing system downtime by 40%",
+                        "Mentored junior developers and established code review processes"
+                    ],
+                    "technologies": [
+                        "React",
+                        "TypeScript",
+                        "Node.js",
+                        "AWS",
+                        "Docker"
+                    ]
+                },
+                {
+                    "title": "Frontend Developer",
+                    "company": "StartupXYZ",
+                    "period": "2020 - 2022",
+                    "location": "San Francisco, CA",
+                    "description": [
+                        "Built responsive user interfaces and improved performance by 40%",
+                        "Collaborated with design team to implement pixel-perfect designs",
+                        "Developed reusable component library used across multiple projects"
+                    ],
+                    "technologies": [
+                        "React",
+                        "JavaScript",
+                        "Tailwind CSS",
+                        "GraphQL"
+                    ]
+                },
+                {
+                    "title": "Junior Developer",
+                    "company": "DevStudio",
+                    "period": "2019 - 2020",
+                    "location": "New York, NY",
+                    "description": [
+                        "Developed and maintained various client projects using modern web technologies",
+                        "Participated in agile development processes and daily standups",
+                        "Contributed to open source projects and internal tools"
+                    ],
+                    "technologies": [
+                        "HTML5",
+                        "CSS3",
+                        "JavaScript",
+                        "Git"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "title": "Education",
+            "items": [
+                {
+                    "degree": "Bachelor of Computer Science",
+                    "school": "Tech University",
+                    "period": "2015 - 2019",
+                    "location": "Boston, MA"
+                },
+                {
+                    "degree": "Full Stack Web Development Bootcamp",
+                    "school": "Code Academy",
+                    "period": "2019",
+                    "location": "Online"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Technical skills",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "database": "Database",
+            "cloud": "Cloud",
+            "tools": "Tools"
+        }
+    },
+    "blog": {
+        "title": "Blog",
+        "subtitle": "Thoughts on development, technology, and more",
+        "readMore": "Read More",
+        "backToBlog": "Back to blog"
+    },
+    "theme": {
+        "toggle": "Toggle theme"
+    },
+    "lang": {
+        "toggle": "ES"
+    }
+}

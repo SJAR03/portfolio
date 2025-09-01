@@ -1,0 +1,118 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "blog": "Blog"
+    },
+    "home": {
+        "greeting": "¡Hola! Soy",
+        "description": "Ingeniero de Software con enfoque en desarrollo backend. Experiencia en .Net, ASP.NET Core, Java, Spring Boot, React y tecnologías web modernas. Apasionado por DevOps",
+        "currentRole": "Actualmente trabajando como",
+        "company": "Desarrollador Backend en Flor de Caña",
+        "companyDescription": "Desarrollo APIs REST de backend con ASP.NET Core, Java, Jakarta EE y Spring Boot usando SQL Server, mientras gestiono servidores Linux en DigitalOcean y AWS con Docker. Colaboro en el desarrollo frontend con React y mantengo flujos de trabajo CI/CD mediante GitLab.",
+        "companyLink": "Visitar sitio web de la empresa",
+        "downloadCV": "Descargar CV",
+        "viewCV": "Ver CV en línea"
+    },
+    "skills": {
+        "title": "Habilidades y Tecnologías"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "intro": "Desarrollador apasionado con experiencia en tecnologías web modernas",
+        "experience": {
+            "title": "Experiencia profesional",
+            "items": [
+                {
+                    "title": "Desarrollador Full Stack Senior",
+                    "company": "TechCorp Inc.",
+                    "period": "2022 - Presente",
+                    "location": "Remoto",
+                    "description": [
+                        "Lideré el desarrollo de aplicaciones web escalables usando React y Node.js",
+                        "Implementé arquitectura de microservicios reduciendo el tiempo de inactividad del sistema en un 40%",
+                        "Mentoricé a desarrolladores junior y establecí procesos de revisión de código"
+                    ],
+                    "technologies": [
+                        "React",
+                        "TypeScript",
+                        "Node.js",
+                        "AWS",
+                        "Docker"
+                    ]
+                },
+                {
+                    "title": "Frontend Developer",
+                    "company": "StartupXYZ",
+                    "period": "2020 - 2022",
+                    "location": "San Francisco, CA",
+                    "description": [
+                        "Construí interfaces de usuario responsivas y mejoré el rendimiento en un 40%",
+                        "Colaboré con el equipo de diseño para implementar diseños pixel-perfect",
+                        "Desarrollé librería de componentes reutilizable usada en varios proyectos"
+                    ],
+                    "technologies": [
+                        "React",
+                        "JavaScript",
+                        "Tailwind CSS",
+                        "GraphQL"
+                    ]
+                },
+                {
+                    "title": "Desarrollador Junior",
+                    "company": "DevStudio",
+                    "period": "2019 - 2020",
+                    "location": "Nueva York, NY",
+                    "description": [
+                        "Desarrollé y mantuve diversos proyectos de clientes usando tecnologías web modernas",
+                        "Participé en procesos ágiles y reuniones diarias",
+                        "Contribuí a proyectos open source y herramientas internas"
+                    ],
+                    "technologies": [
+                        "HTML5",
+                        "CSS3",
+                        "JavaScript",
+                        "Git"
+                    ]
+                }
+            ]
+        },
+        "education": {
+            "title": "Educación",
+            "items": [
+                {
+                    "degree": "Licenciatura en Ciencias de la Computación",
+                    "school": "Tech University",
+                    "period": "2015 - 2019",
+                    "location": "Boston, MA"
+                },
+                {
+                    "degree": "Bootcamp de Desarrollo Web Full Stack",
+                    "school": "Code Academy",
+                    "period": "2019",
+                    "location": "En linea"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Habilidades técnicas",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "database": "Base de datos",
+            "cloud": "Nube",
+            "tools": "Herramientas"
+        }
+    },
+    "blog": {
+        "title": "Blog",
+        "subtitle": "Reflexiones sobre desarrollo, tecnología y más",
+        "readMore": "Leer más",
+        "backToBlog": "Volver al blog"
+    },
+    "theme": {
+        "toggle": "Cambiar tema"
+    },
+    "lang": {
+        "toggle": "EN"
+    }
+}
