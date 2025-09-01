@@ -22,7 +22,7 @@ React's component-based architecture makes building interactive UIs straightforw
 
 ## Setting Up Your Environment
 
-To get started with React, you'll need Node.js installed. The easiest way to create a new React project is using Vite:
+To get started with React, you'll need Node.js `installed`. The easiest way to create a new React project is using Vite:
 
 ```bash
 npm create vite@latest my-react-app -- --template react-ts

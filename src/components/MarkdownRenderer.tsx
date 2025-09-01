@@ -39,32 +39,24 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
             <p className="text-foreground mb-4 leading-relaxed">{children}</p>
           ),
 
-          // Code: inline vs block
-          code: ({ inline, children, className, ...props }: any) => {
-            if (inline) {
-              // Inline code stays on the same line, small box around text only
-              return (
-                <code
-                  className="inline bg-background-secondary text-primary px-1 py-0.5 rounded font-mono text-sm"
-                  {...props}
-                >
-                  {children}
-                </code>
-              );
-            }
-
-            // Code block → big box, full width
+          // Inline code and code blocks
+          code: ({ children, ...props }) => {
             return (
-              <pre
-                className="p-4 rounded-md overflow-x-auto my-4 border border-card-border bg-background-tertiary"
-                {...props}
-              >
-                <code className={`code-text ${className || ""}`}>
-                  {children}
-                </code>
-              </pre>
+              <code className="code-text" {...props}>
+                {children}
+              </code>
             );
           },
+
+          // The code block are rendered separately
+          pre: ({ children, ...props }) => (
+            <pre
+              className="p-4 rounded-md overflow-x-auto my-4 border border-card-border bg-background-tertiary"
+              {...props}
+            >
+              {children}
+            </pre>
+          ),
 
           // Lists
           ul: ({ children }) => (
