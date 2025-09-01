@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -37,6 +37,8 @@ const socialLinks: SocialLink[] = [
 
 const SocialLinks: React.FC = () => {
   const [copied, setCopied] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleCopy = (email: string) => {
     navigator.clipboard.writeText(email);
@@ -44,38 +46,56 @@ const SocialLinks: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setShowTooltip(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setShowTooltip(false);
+    }, 1500); // Wait 1.5 seconds before hiding
+  };
+
   return (
     <div className="flex items-center justify-center gap-4 flex-wrap">
       {socialLinks.map((link) => {
         if (link.isEmail && link.email) {
           return (
-            <div key={link.name} className="relative group">
+            <div
+              key={link.name}
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <a
                 href={link.url}
                 className="pixel-card p-3 hover:bg-background-tertiary transition-all duration-200 flex items-center justify-center"
                 title={link.name}
               >
-                <span className="text-primary group-hover:text-primary-glow transition-colors">
+                <span className="text-primary hover:text-primary-glow transition-colors">
                   {link.icon}
                 </span>
               </a>
 
-              {/* Tooltip */}
-              <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 pointer-events-auto transition-opacity duration-200 z-50">
-                <div className="bg-background-tertiary text-primary px-4 py-3 rounded-full shadow-lg flex flex-col items-center min-w-[250px] max-w-[300px] text-center">
-                  <span className="text-sm break-words">
-                    {copied ? "¡Copiado! ✅" : link.email}
-                  </span>
-                  {!copied && (
-                    <button
-                      onClick={() => handleCopy(link.email!)}
-                      className="mt-2 px-4 py-1 bg-primary text-black rounded-full text-xs hover:bg-primary-glow transition"
-                    >
-                      Copiar
-                    </button>
-                  )}
+              {/* Tooltip controlled by state */}
+              {showTooltip && (
+                <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 transition-opacity duration-200 z-50">
+                  <div className="bg-background-tertiary text-primary px-4 py-3 rounded-full shadow-lg flex flex-col items-center min-w-[250px] max-w-[300px] text-center">
+                    <span className="text-sm break-words text-accent-red">
+                      {copied ? "¡Copiado! ✅" : link.email}
+                    </span>
+                    {!copied && (
+                      <button
+                        onClick={() => handleCopy(link.email!)}
+                        className="mt-2 px-4 py-1 bg-primary text-black rounded-full text-xs hover:bg-primary-glow transition"
+                      >
+                        Copiar
+                      </button>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           );
         }
@@ -86,10 +106,10 @@ const SocialLinks: React.FC = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="pixel-card p-3 hover:bg-background-tertiary transition-all duration-200 group flex items-center justify-center"
+            className="pixel-card p-3 hover:bg-background-tertiary transition-all duration-200 flex items-center justify-center"
             title={link.name}
           >
-            <span className="text-primary group-hover:text-primary-glow transition-colors">
+            <span className="text-primary hover:text-primary-glow transition-colors">
               {link.icon}
             </span>
           </a>

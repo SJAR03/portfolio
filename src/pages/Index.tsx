@@ -19,7 +19,7 @@ const Index = () => {
     "Gitlab",
   ];
 
-  // Obtener los objetos Technology correspondientes
+  // Get Technology objects
   const currentJobTechnologies = currentJobTechNames
     .map((name) => getTechnologyByName(name))
     .filter((tech): tech is Technology => tech !== undefined); // filter undefined
@@ -69,7 +69,7 @@ const Index = () => {
                 {/* Social Links */}
                 <SocialLinks />
 
-                <p className="modern-subtitle max-w-2xl mx-auto text-start">
+                <p className="modern-subtitle max-w-2xl mx-auto text-start text-foreground">
                   {t("home.description")}
                 </p>
               </div>
@@ -142,7 +142,7 @@ const Index = () => {
 
             {/* Skills Carousel */}
             <div className="space-y-4">
-              <h3 className="modern-text text-lg text-primary-purple-muted font-semibold">
+              <h3 className="modern-text text-lg text-primary font-semibold">
                 {t("skills.title")}
               </h3>
               <SkillsCarousel />

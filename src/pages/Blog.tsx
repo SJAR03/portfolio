@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { Calendar, ArrowRight, Clock } from "lucide-react";
-import { blogPostsMeta } from "@/data/markdownPosts";
+import {
+  importAllPosts,
+  type BlogPost as PostType,
+} from "@/data/markdownLoader";
 
 const Blog: React.FC = () => {
   const { t } = useLanguage();
+  const posts: PostType[] = importAllPosts();
 
   return (
     <div className="min-h-screen bg-background pixel-grid pt-20">
@@ -18,9 +22,9 @@ const Blog: React.FC = () => {
 
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {blogPostsMeta.map((post, index) => (
+          {posts.map((post, index) => (
             <article
-              key={post.id}
+              key={post.slug}
               className="modern-card p-6 hover:bg-background-secondary transition-colors animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >

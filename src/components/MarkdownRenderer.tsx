@@ -1,8 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
-import "highlight.js/styles/github-dark.css";
 
 interface MarkdownRendererProps {
   content: string;
@@ -14,11 +12,12 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`prose prose-invert max-w-none ${className}`}>
+    <div className={`prose max-w-none ${className}`}>
       <ReactMarkdown
+        children={content}
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight]}
         components={{
+          // Headings
           h1: ({ children }) => (
             <h1 className="modern-text text-3xl font-bold text-primary mb-6 mt-8">
               {children}
@@ -34,50 +33,62 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
               {children}
             </h3>
           ),
+
+          // Paragraphs
           p: ({ children }) => (
             <p className="text-foreground mb-4 leading-relaxed">{children}</p>
           ),
+
+          // Code: inline vs block
           code: ({ inline, children, className, ...props }: any) => {
             if (inline) {
+              // Inline code stays on the same line, small box around text only
               return (
                 <code
-                  className="code-text bg-background-secondary text-primary px-2 py-1 rounded text-sm"
+                  className="inline bg-background-secondary text-primary px-1 py-0.5 rounded font-mono text-sm"
                   {...props}
                 >
                   {children}
                 </code>
               );
             }
+
+            // Code block → big box, full width
             return (
-              <code
-                className="code-text block bg-background-secondary p-4 rounded-md overflow-x-auto text-sm"
+              <pre
+                className="p-4 rounded-md overflow-x-auto my-4 border border-card-border bg-background-tertiary"
                 {...props}
               >
-                {children}
-              </code>
+                <code className={`code-text ${className || ""}`}>
+                  {children}
+                </code>
+              </pre>
             );
           },
-          pre: ({ children }) => (
-            <pre className="bg-background-secondary p-4 rounded-md overflow-x-auto my-4 border border-card-border">
-              {children}
-            </pre>
-          ),
+
+          // Lists
           ul: ({ children }) => (
-            <ul className="text-foreground mb-4 pl-6">{children}</ul>
+            <ul className="text-foreground mb-4 pl-6 list-disc prose-invert">
+              {children}
+            </ul>
           ),
           ol: ({ children }) => (
-            <ol className="text-foreground mb-4 pl-6">{children}</ol>
+            <ol className="text-foreground mb-4 pl-6 list-decimal prose-invert">
+              {children}
+            </ol>
           ),
           li: ({ children }) => (
-            <li className="mb-2 leading-relaxed">
-              <span className="text-primary">•</span> {children}
-            </li>
+            <li className="mb-2 leading-relaxed">{children}</li>
           ),
+
+          // Blockquotes
           blockquote: ({ children }) => (
-            <blockquote className="border-l-4 border-primary bg-background-secondary p-4 my-4 italic">
+            <blockquote className="border-l-4 border-primary bg-background-secondary p-4 my-4 italic rounded">
               {children}
             </blockquote>
           ),
+
+          // Links
           a: ({ href, children }) => (
             <a
               href={href}
@@ -88,13 +99,24 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
               {children}
             </a>
           ),
+
+          // Images
           img: ({ src, alt }) => (
-            <img
-              src={src}
-              alt={alt}
-              className="rounded-md my-4 max-w-full border border-card-border"
-            />
+            <div className="flex flex-col items-center my-6">
+              <img
+                src={src || ""}
+                alt={alt || ""}
+                className="rounded-md max-w-full border border-card-border"
+              />
+              {alt && (
+                <p className="mt-2 text-sm text-center text-primary-purple-muted italic">
+                  {alt}
+                </p>
+              )}
+            </div>
           ),
+
+          // Tables
           table: ({ children }) => (
             <div className="overflow-x-auto my-4">
               <table className="min-w-full border border-card-border rounded-md">
@@ -103,7 +125,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
             </div>
           ),
           th: ({ children }) => (
-            <th className="border border-card-border px-4 py-2 bg-background-secondary text-primary font-semibold">
+            <th className="border border-card-border px-4 py-2 bg-background-tertiary text-primary font-semibold">
               {children}
             </th>
           ),
@@ -113,9 +135,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
             </td>
           ),
         }}
-      >
-        {content}
-      </ReactMarkdown>
+      />
     </div>
   );
 };
