@@ -24,55 +24,79 @@
             "title": "Professional experience",
             "items": [
                 {
-                    "title": "Senior Full Stack Developer",
-                    "company": "TechCorp Inc.",
-                    "period": "2022 - Present",
-                    "location": "Remote",
+                    "title": "Software Developer",
+                    "company": "Flor de caña",
+                    "period": "October 2024 - Present",
+                    "location": "Nicaragua",
                     "description": [
-                        "Leading development of scalable web applications using React and Node.js",
-                        "Implemented microservices architecture reducing system downtime by 40%",
-                        "Mentored junior developers and established code review processes"
+                        "Design and implement backend solutions and REST APIs using ASP.NET Core (C#), Java, and Spring Boot with SQL Server for data persistence.",
+                        "Perform server administration on DigitalOcean and AWS EC2, managing Linux environments, Docker, and Docker Compose.",
+                        "Support frontend development with React and collaborate on CI/CD pipelines using GitLab."
                     ],
                     "technologies": [
+                        ".Net",
+                        "C#",
+                        "Java",
+                        "Spring Boot",
                         "React",
-                        "TypeScript",
-                        "Node.js",
+                        "SQL Server",
+                        "Docker",
+                        "Digital Ocean",
                         "AWS",
-                        "Docker"
+                        "Gitlab"
                     ]
                 },
                 {
-                    "title": "Frontend Developer",
-                    "company": "StartupXYZ",
-                    "period": "2020 - 2022",
-                    "location": "San Francisco, CA",
+                    "title": "System Analyst",
+                    "company": "Digesa",
+                    "period": "February 2024 - September 2024",
+                    "location": "Nicaragua",
                     "description": [
-                        "Built responsive user interfaces and improved performance by 40%",
-                        "Collaborated with design team to implement pixel-perfect designs",
-                        "Developed reusable component library used across multiple projects"
+                        "Designed, developed, and maintained web and desktop applications using C#, VB.Net, WinForms, ASP.NET Core, PHP, and Python.",
+                        "Managed SQL Server and MySQL databases and administered servers with Proxmox virtualization.",
+                        "Implemented and supported IT systems to ensure reliable operation of company services and internal applications."
                     ],
                     "technologies": [
-                        "React",
-                        "JavaScript",
-                        "Tailwind CSS",
-                        "GraphQL"
+                        "C#",
+                        ".Net",
+                        "PHP",
+                        "Python",
+                        "SQL Server",
+                        "MySQL",
+                        "Proxmox",
+                        "Windows"
                     ]
                 },
                 {
-                    "title": "Junior Developer",
-                    "company": "DevStudio",
-                    "period": "2019 - 2020",
-                    "location": "New York, NY",
+                    "title": "Developer Intern",
+                    "company": "Batidos pitaya",
+                    "period": "December 2023 - January 2024",
+                    "location": "Nicaragua",
                     "description": [
-                        "Developed and maintained various client projects using modern web technologies",
-                        "Participated in agile development processes and daily standups",
-                        "Contributed to open source projects and internal tools"
+                        "Developed a desktop system for internal resource management and billing using Visual Basic and Visual Studio.",
+                        "Optimized database queries and performed data management tasks using SQL.",
+                        "Assisted in setting up a local network to connect company devices on the same subnet."
                     ],
                     "technologies": [
-                        "HTML5",
-                        "CSS3",
-                        "JavaScript",
-                        "Git"
+                        "Visual Basic",
+                        "SQL Server",
+                        "Visual Studio"
+                    ]
+                },
+                {
+                    "title": "Technical Support Intern",
+                    "company": "García & Bodán",
+                    "period": "July 2023 - October 2023",
+                    "location": "Nicaragua",
+                    "description": [
+                        "Provided technical support for hardware, software, and networking issues.",
+                        "Managed and configured Odoo modules.",
+                        "Developed and maintained a WordPress website."
+                    ],
+                    "technologies": [
+                        "Odoo",
+                        "WordPress",
+                        "Technical Support"
                     ]
                 }
             ]
@@ -81,16 +105,22 @@
             "title": "Education",
             "items": [
                 {
-                    "degree": "Bachelor of Computer Science",
-                    "school": "Tech University",
-                    "period": "2015 - 2019",
-                    "location": "Boston, MA"
+                    "degree": "Bachelor of Information Systems Engineering",
+                    "school": "Universidad Rafael Landívar",
+                    "period": "2021 - 2025",
+                    "location": "Guatemala"
                 },
                 {
-                    "degree": "Full Stack Web Development Bootcamp",
-                    "school": "Code Academy",
-                    "period": "2019",
-                    "location": "Online"
+                    "degree": "CCNA (Minor in Networks)",
+                    "school": "Don Bosco Youth Center",
+                    "period": "2023",
+                    "location": "Nicaragua"
+                },
+                {
+                    "degree": "English Certificate for Professional Development",
+                    "school": "Keiser University",
+                    "period": "2022",
+                    "location": "Nicaragua"
                 }
             ]
         },

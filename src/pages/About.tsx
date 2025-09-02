@@ -191,7 +191,33 @@ const About: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skillCategoriesConfig.map((category) => {
-                const techs = getTechnologiesByCategory(category.key as any); // get technologies by category
+                // Obtener tecnologías por categoría
+                const techs = getTechnologiesByCategory(category.key as any)
+                  .slice() // copia para no mutar el original
+                  .sort((a, b) => {
+                    // Primero por mastery
+                    if (
+                      a.mastery === "Really good at it" &&
+                      b.mastery !== "Really good at it"
+                    )
+                      return -1;
+                    if (
+                      a.mastery !== "Really good at it" &&
+                      b.mastery === "Really good at it"
+                    )
+                      return 1;
+                    // Mantener el orden original de la lista (los que tienen el mismo mastery)
+                    return (
+                      technologies.findIndex((t) => t.name === a.name) -
+                      technologies.findIndex((t) => t.name === b.name)
+                    );
+                  });
+
+                const columnsClass =
+                  techs.length > 5
+                    ? "grid grid-cols-2 gap-2"
+                    : "flex flex-col gap-3";
+
                 return (
                   <div
                     key={category.key}
@@ -205,7 +231,7 @@ const About: React.FC = () => {
                         {category.title}
                       </h3>
                     </div>
-                    <div className="space-y-3">
+                    <div className={columnsClass}>
                       {techs.map((tech) => (
                         <div
                           key={tech.name}

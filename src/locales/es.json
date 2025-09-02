@@ -6,16 +6,16 @@
     },
     "home": {
         "greeting": "¡Hola! Soy",
-        "description": "Ingeniero de Software con enfoque en desarrollo backend. Experiencia en .Net, ASP.NET Core, Java, Spring Boot, React y tecnologías web modernas. Apasionado por DevOps",
+        "description": "Ingeniero de software con enfoque en desarrollo backend. Experiencia en .Net, ASP.NET Core, Java, Spring Boot, React y tecnologías web modernas. Apasionado por DevOps",
         "currentRole": "Actualmente trabajando como",
         "company": "Desarrollador Backend en Flor de Caña",
-        "companyDescription": "Desarrollo APIs REST de backend con ASP.NET Core, Java, Jakarta EE y Spring Boot usando SQL Server, mientras gestiono servidores Linux en DigitalOcean y AWS con Docker. Colaboro en el desarrollo frontend con React y mantengo flujos de trabajo CI/CD mediante GitLab.",
+        "companyDescription": "Desarrollo de APIs REST backend con ASP.NET Core, Java, Jakarta EE y Spring Boot utilizando SQL Server, además de administrar servidores Linux en DigitalOcean y AWS con Docker. Colaboración en desarrollo frontend con React y mantenimiento de flujos CI/CD vía GitLab.",
         "companyLink": "Visitar sitio web de la empresa",
         "downloadCV": "Descargar CV",
         "viewCV": "Ver CV en línea"
     },
     "skills": {
-        "title": "Habilidades y Tecnologías"
+        "title": "Habilidades y tecnologías"
     },
     "about": {
         "title": "Sobre mí",
@@ -24,55 +24,79 @@
             "title": "Experiencia profesional",
             "items": [
                 {
-                    "title": "Desarrollador Full Stack Senior",
-                    "company": "TechCorp Inc.",
-                    "period": "2022 - Presente",
-                    "location": "Remoto",
+                    "title": "Desarrollador de Software",
+                    "company": "Flor de caña",
+                    "period": "Octubre 2024 - Presente",
+                    "location": "Nicaragua",
                     "description": [
-                        "Lideré el desarrollo de aplicaciones web escalables usando React y Node.js",
-                        "Implementé arquitectura de microservicios reduciendo el tiempo de inactividad del sistema en un 40%",
-                        "Mentoricé a desarrolladores junior y establecí procesos de revisión de código"
+                        "Diseño e implemento soluciones backend y APIs REST usando ASP.NET Core (C#), Java y Spring Boot con SQL Server para la persistencia de datos.",
+                        "Realizo administración de servidores en DigitalOcean y AWS EC2, gestionando entornos Linux, Docker y Docker Compose.",
+                        "Apoyo el desarrollo frontend con React y colaboro en pipelines de CI/CD utilizando GitLab."
                     ],
                     "technologies": [
+                        ".Net",
+                        "C#",
+                        "Java",
+                        "Spring Boot",
                         "React",
-                        "TypeScript",
-                        "Node.js",
+                        "SQL Server",
+                        "Docker",
+                        "Digital Ocean",
                         "AWS",
-                        "Docker"
+                        "Gitlab"
                     ]
                 },
                 {
-                    "title": "Frontend Developer",
-                    "company": "StartupXYZ",
-                    "period": "2020 - 2022",
-                    "location": "San Francisco, CA",
+                    "title": "Analista de Sistemas",
+                    "company": "Digesa",
+                    "period": "Febrero 2024 - Septiembre 2024",
+                    "location": "Nicaragua",
                     "description": [
-                        "Construí interfaces de usuario responsivas y mejoré el rendimiento en un 40%",
-                        "Colaboré con el equipo de diseño para implementar diseños pixel-perfect",
-                        "Desarrollé librería de componentes reutilizable usada en varios proyectos"
+                        "Diseñé, desarrollé y mantuve aplicaciones web y de escritorio usando C#, VB.Net, WinForms, ASP.NET Core, PHP y Python.",
+                        "Administré bases de datos SQL Server y MySQL, así como servidores con virtualización Proxmox.",
+                        "Implementé y di soporte a sistemas internos para asegurar la operación confiable de los servicios y aplicaciones de la empresa."
                     ],
                     "technologies": [
-                        "React",
-                        "JavaScript",
-                        "Tailwind CSS",
-                        "GraphQL"
+                        "C#",
+                        ".Net",
+                        "PHP",
+                        "Python",
+                        "SQL Server",
+                        "MySQL",
+                        "Proxmox",
+                        "Windows"
                     ]
                 },
                 {
-                    "title": "Desarrollador Junior",
-                    "company": "DevStudio",
-                    "period": "2019 - 2020",
-                    "location": "Nueva York, NY",
+                    "title": "Practicante de Desarrollo",
+                    "company": "Batidos pitaya",
+                    "period": "Diciembre 2023 - Enero 2024",
+                    "location": "Nicaragua",
                     "description": [
-                        "Desarrollé y mantuve diversos proyectos de clientes usando tecnologías web modernas",
-                        "Participé en procesos ágiles y reuniones diarias",
-                        "Contribuí a proyectos open source y herramientas internas"
+                        "Desarrollé un sistema de escritorio para la gestión interna de recursos y facturación utilizando Visual Basic y Visual Studio.",
+                        "Optimicé consultas de base de datos y realicé tareas de gestión de datos con SQL.",
+                        "Colaboré en la configuración de una red local para conectar dispositivos de la empresa en la misma subred."
                     ],
                     "technologies": [
-                        "HTML5",
-                        "CSS3",
-                        "JavaScript",
-                        "Git"
+                        "Visual Basic",
+                        "SQL Server",
+                        "Visual Studio"
+                    ]
+                },
+                {
+                    "title": "Practicante de Soporte Técnico",
+                    "company": "García & Bodán",
+                    "period": "Julio 2023 - Octubre 2023",
+                    "location": "Nicaragua",
+                    "description": [
+                        "Brindé soporte técnico para problemas de hardware, software y redes.",
+                        "Gestioné y configuré módulos de Odoo.",
+                        "Desarrollé y di mantenimiento a un sitio web en WordPress."
+                    ],
+                    "technologies": [
+                        "Odoo",
+                        "WordPress",
+                        "Soporte Técnico"
                     ]
                 }
             ]
@@ -81,16 +105,22 @@
             "title": "Educación",
             "items": [
                 {
-                    "degree": "Licenciatura en Ciencias de la Computación",
-                    "school": "Tech University",
-                    "period": "2015 - 2019",
-                    "location": "Boston, MA"
+                    "degree": "Licenciatura en Ingeniería de Sistemas de Información",
+                    "school": "Universidad Rafael Landívar",
+                    "period": "2021 - 2025",
+                    "location": "Guatemala"
                 },
                 {
-                    "degree": "Bootcamp de Desarrollo Web Full Stack",
-                    "school": "Code Academy",
-                    "period": "2019",
-                    "location": "En linea"
+                    "degree": "CCNA (Mención en Redes)",
+                    "school": "Centro Juvenil Don Bosco",
+                    "period": "2023",
+                    "location": "Nicaragua"
+                },
+                {
+                    "degree": "Certificado de Inglés para Desarrollo Profesional",
+                    "school": "Keiser University",
+                    "period": "2022",
+                    "location": "Nicaragua"
                 }
             ]
         },
